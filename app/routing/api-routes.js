@@ -24,6 +24,28 @@ module.exports = function(app) {
 	app.post('/api/new', function(req, res) {
 		var user = req.body;
 		friends.push(user);
-		res.end('New user added <br>', JSON.stringify(user));
+		res.end(JSON.stringify(user));
 	});
+
+	app.put('/api/:name', function(req, res) {
+		var name = req.params.name;
+		for(var i = 0; i < friends.length; i++) {
+			if(friends[i].name === name) {
+				friends[i] = req.body;
+				res.json(friends[i]);
+			}
+		}
+		res.json(friends);
+	});
+
+	app.delete('/api/:name', function(req, res) {
+		var name = req.params.name;
+		for(var i = 0; i < friends.length; i++) {
+			if(friends[i].name === name) {
+				friends.splice(i, 1);
+				res.json(friends);
+			}
+		}
+		res.json(friends);
+	})
 }

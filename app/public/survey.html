@@ -2,10 +2,141 @@
 <html>
 <head>
 	<title>TEST</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 </head>
 <body>
 
-	<p>AWESOME TEST</p>
+	<form action="" method="POST" role="form">
 
+		<div class="form-group">
+			<label for="">Name</label>
+			<input type="text" class="form-control" name="name" id="name" placeholder="Input field">
+		</div>
+		
+		<div class="form-group">
+			<h3>Question 1</h3>
+			<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+			<select class="form-control" name="question1" id="q1">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<h3>Question 2</h3>
+			<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+			<select class="form-control" name="question2" id="q2">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<h3>Question 3</h3>
+			<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+			<select class="form-control" name="question3" id="q3">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<h3>Question 4</h3>
+			<h4>You rarely do something just out of sheer curiosity.</h4>
+			<select class="form-control" name="question4" id="q4">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<h3>Question 5</h3>
+			<h4>People can rarely upset you.</h4>
+			<select class="form-control" name="question5" id="q5">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+	
+		<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="assets/javascript/jquery-2.2.4.min.js"></script>
+<script src="assets/javascript/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$('#submit').on('click', function(error) {
+		var user = {
+			name: $('#name').val().trim(),
+			q1: $('#q1').val().trim(),
+			q2: $('#q2').val().trim(),
+			q3: $('#q3').val().trim(),
+			q4: $('#q4').val().trim(),
+			q5: $('#q5').val().trim()
+		};
+
+		var currentURL = window.location.origin;
+
+		$.post(currentURL + '/api/new', user)
+			.done(function(data) {
+				$.get(currentURL + '/api/friends', function(friends) {
+					var tempMatch;
+					var highestMatchScore;
+					for(var i = 0; i < friends.length-1; i++) {
+						console.log(highestMatchScore);
+						var tempScore = 0;
+						tempScore += Math.abs(user.q1 - friends[i].q1);
+						tempScore += Math.abs(user.q2 - friends[i].q2);
+						tempScore += Math.abs(user.q3 - friends[i].q3);
+						tempScore += Math.abs(user.q4 - friends[i].q4);
+						tempScore += Math.abs(user.q5 - friends[i].q5);
+						if (tempScore <= highestMatchScore) {
+							highestMatchScore = tempScore;
+							tempMatch = friends[i];
+						} else if (typeof highestMatchScore === 'undefined') {
+							highestMatchScore = tempScore;
+						}
+					}
+					$('.modal-body').html(JSON.stringify(tempMatch));
+					$('#myModal').modal('show');
+				});
+			});
+
+		return false;
+	})
+</script>
 </body>
 </html>
