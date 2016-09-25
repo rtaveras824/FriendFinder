@@ -2,10 +2,39 @@
 <html>
 <head>
 	<title>TEST</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Open+Sans" rel="stylesheet">
+
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			font-family: 'Baloo Bhai', cursive;
+			color: white;
+			
+		}
+		h1 {
+			font-family: 'Open Sans', sans-serif;
+			margin: 0;
+			padding: 30px;
+
+		}
+		.fluid-container {
+			background: url('assets/images/pexels-photo-29672.jpg');
+			background-size: cover;
+			height: 100%;
+			text-align: center;
+		}
+		
+	</style>
 </head>
 <body>
-
-	<p><img src="assets/images/222.jpg" alt=""></p>
-
+	<div class="fluid-container">
+		<h1>Friend Finder</h1>
+		<p>Find a friend or something like that.</p>
+		<a href="/survey" class="btn btn-default">Go To Survey</a>
+		<div class="links"><a href="/api/friends">API List</a> <a href="https://github.com/rtaveras824/FriendFinder">Github</a></div>
+	</div>
+	
+	
 </body>
 </html>

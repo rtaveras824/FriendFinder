@@ -6,93 +6,161 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 </head>
 <body>
+	<div class="container">
+		<form action="" method="POST" role="form">
 
-	<form action="" method="POST" role="form">
+			<div class="form-group">
+				<label for="">Name</label>
+				<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+			</div>
 
-		<div class="form-group">
-			<label for="">Name</label>
-			<input type="text" class="form-control" name="name" id="name" placeholder="Input field">
-		</div>
+			<div class="form-group">
+				<label for="">Photo</label>
+				<input type="text" class="form-control" name="photo" id="photo" placeholder="Photo url">
+			</div>
+			
+			<div class="form-group">
+				<h3>Question 1</h3>
+				<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+				<select class="form-control" name="question1" id="q1">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 2</h3>
+				<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+				<select class="form-control" name="question2" id="q2">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 3</h3>
+				<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+				<select class="form-control" name="question3" id="q3">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 4</h3>
+				<h4>You rarely do something just out of sheer curiosity.</h4>
+				<select class="form-control" name="question4" id="q4">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 5</h3>
+				<h4>People can rarely upset you.</h4>
+				<select class="form-control" name="question5" id="q5">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 6</h3>
+				<h4>It is often difficult for you to relate to other people's feelings.</h4>
+				<select class="form-control" name="question6" id="q6">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 7</h3>
+				<h4>In a discussion, truth should be more important than people's sensitivies.</h4>
+				<select class="form-control" name="question7" id="q7">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 8</h3>
+				<h4>You rarely get carried away by fantasies and ideas.</h4>
+				<select class="form-control" name="question8" id="q8">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 9</h3>
+				<h4>You think that everyone's views should be respected regardless of whether they are supported by facts or not.</h4>
+				<select class="form-control" name="question9" id="q9">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<h3>Question 10</h3>
+				<h4>You feel more engergetic after epending time with a group of people.</h4>
+				<select class="form-control" name="question10" id="q10">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
 		
-		<div class="form-group">
-			<h3>Question 1</h3>
-			<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-			<select class="form-control" name="question1" id="q1">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
+			<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+		</form>
 
-		<div class="form-group">
-			<h3>Question 2</h3>
-			<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-			<select class="form-control" name="question2" id="q2">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<h3>Question 3</h3>
-			<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-			<select class="form-control" name="question3" id="q3">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<h3>Question 4</h3>
-			<h4>You rarely do something just out of sheer curiosity.</h4>
-			<select class="form-control" name="question4" id="q4">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<h3>Question 5</h3>
-			<h4>People can rarely upset you.</h4>
-			<select class="form-control" name="question5" id="q5">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
-	
-		<button type="submit" id="submit" class="btn btn-primary">Submit</button>
-	</form>
-
-	<div class="modal fade" id="myModal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Modal title</h4>
-				</div>
-				<div class="modal-body">
-					
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="links"><a href="/api/friends">API List</a> <a href="https://github.com/rtaveras824/FriendFinder">Github</a></div>
 	</div>
 
 <script src="assets/javascript/jquery-2.2.4.min.js"></script>
@@ -104,11 +172,16 @@
 		var q3 = $('#q3').val().trim();
 		var q4 = $('#q4').val().trim();
 		var q5 = $('#q5').val().trim();
+		var q6 = $('#q5').val().trim();
+		var q7 = $('#q5').val().trim();
+		var q8 = $('#q5').val().trim();
+		var q9 = $('#q5').val().trim();
+		var q10 = $('#q5').val().trim();
 		var scores = [];
-		scores.push(q1, q2, q3, q4, q5);
+		scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
 		var user = {
 			name: $('#name').val().trim(),
-			photo: 'www.google.com',
+			photo: $('#photo').val().trim(),
 			scores: scores
 		};
 
@@ -124,13 +197,14 @@
 						for(var j = 0; j < friends[i].scores.length; j++) {
 							tempScore += Math.abs(user.scores[j] - friends[i].scores[j]);
 						}
-						if (tempScore <= highestMatchScore || typeof highestMatchScore === 'undefined') {
+						if ((tempScore <= highestMatchScore || typeof highestMatchScore === 'undefined') && friends[i].name !== user.name) {
 							highestMatchScore = tempScore;
 							tempMatch = friends[i];
 						}
 						console.log(tempScore);
 					}
-					$('.modal-body').html(JSON.stringify(tempMatch));
+					$('.modal-title').html(tempMatch.name)
+					$('.modal-body').html('<img class="img-responsive" src="' + tempMatch.photo + '">');
 					$('#myModal').modal('show');
 				});
 			});
